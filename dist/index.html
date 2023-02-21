@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="systemjs-importmap">
+    {
+      "imports":{
+        "react":"https://cdn.bootcdn.net/ajax/libs/react/18.2.0/cjs/react-jsx-dev-runtime.development.js",
+        "react-dom":"https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/cjs/react-dom-server-legacy.browser.development.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/systemjs/6.13.0/extras/amd.js"></script>
+  <script>
+    //这里可以动态加载模块，可以加在远程链接
+    //AMD 依赖前置 引入index.js前引用
+    System.import('./index.js')
+  </script>
+</body>
+</html>
